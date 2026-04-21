@@ -13,6 +13,7 @@ Step 4: Add the partials to the about and contact pages to show the header and f
 */
 
 app.use(express.static("public"));
+app.set("view engine", "ejs");
 
 app.get("/", (req, res) => {
   res.render("index.ejs");
@@ -29,3 +30,5 @@ app.get("/contact", (req, res) => {
 app.listen(port, () => {
   console.log(`Server running on port ${port}`);
 });
+
+export default app;
